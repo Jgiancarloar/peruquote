@@ -1,4 +1,4 @@
-import { Route, Routes } from "react-router-dom"
+import { Navigate, Route, Routes } from "react-router-dom"
 import Generator from "./pages/Generator"
 import Home from "./pages/Home"
 import Configuration from "./pages/Configuration"
@@ -42,6 +42,7 @@ function App() {
           <Route path="/" element={<Home></Home>}></Route>
           <Route path="/generator" element={<Generator></Generator>}></Route>
           <Route path="/configuration" element={<Configuration></Configuration>}></Route>
+          <Route path="/*" element={<Navigate to={"/"} />}></Route>
         </Routes>
       </section>
     </main>
