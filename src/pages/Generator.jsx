@@ -21,25 +21,23 @@ const Generator = () => {
         <table className='w-full mb-5'>
           <thead className='text-sm font-semibold bg-gray-400 text-black'>
             <tr>
-              <td className='text-center py-2 border-0 w-12'>Producto</td>
-              <td className='text-center py-2 border-0'>U.M.</td>
-              <td className='text-center py-2 border-0'>Cant</td>
-              <td className='text-center py-2 border-0'>Precio</td>
-              <td className='text-center py-2 border-0'>Total</td>
+              <td className='text-center py-2 border-x-[1px] border-[#484848] w-1/3'>Producto</td>
+              <td className='text-center py-2 border-x-[1px] border-[#484848]'>U.M.</td>
+              <td className='text-center py-2 border-x-[1px] border-[#484848]'>Cant</td>
+              <td className='text-center py-2 border-x-[1px] border-[#484848]'>Precio</td>
+              <td className='text-center py-2 border-x-[1px] border-[#484848]'>Total</td>
             </tr>
           </thead>
           <tbody className='text-xs'>
             {items?.map(item =>
-            (<tr className='bg-yellow-900 border-b-[1px] uppercase' key={item.id}>
-              <td className='text-left py-2 px-1'>{item.producto}</td>
-              <td className='text-center py-2 px-1'>{item.unidad}</td>
-              <td className='text-right py-2 px-1'>{item.cantidad}</td>
-              <td className='text-right py-2 px-1'>{item.precio}</td>
-              <td className='text-right py-2 px-1'>{parseFloat((item.cantidad) * (item.precio)).toFixed(2)}</td>
-              <div className='bg-pink-700 flex justify-center py-2 w-full'>
-                <MdEdit />
-                <MdDelete />
-              </div>
+            (<tr className='uppercase' key={item.id}>
+              <td className='border-b-[1px] text-left py-2 px-1'>{item.producto}</td>
+              <td className='border-b-[1px] text-center py-2 px-1'>{item.unidad}</td>
+              <td className='border-b-[1px] text-right py-2 px-1'>{item.cantidad}</td>
+              <td className='border-b-[1px] text-right py-2 px-1'>{item.precio}</td>
+              <td className='border-b-[1px] text-right py-2 px-1'>{parseFloat((item.cantidad) * (item.precio)).toFixed(2)}</td>
+              <td className='py-2 pl-2'><MdEdit size={15} /></td>
+              <td className='py-2'><MdDelete size={15} /></td>
             </tr>
 
             )
