@@ -5,7 +5,7 @@ import usePeruQuoteContext from '../hooks/usePeruQuoteContext';
 
 const Configuration = () => {
 
-  const { data, setData, empresa, setEmpresa, empNombre, setEmpNombre, empDoi, setEmpDoi, empTelefono, setEmpTelefono } = usePeruQuoteContext();
+  const { empresa, setEmpresa, empNombre, setEmpNombre, empDoi, setEmpDoi, empTelefono, setEmpTelefono } = usePeruQuoteContext();
 
   const addEmpresa = (e) => {
     e.preventDefault()

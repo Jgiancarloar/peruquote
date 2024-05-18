@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import { IoIosCloseCircleOutline } from "react-icons/io";
 import usePeruQuoteContext from '../hooks/usePeruQuoteContext';
 
+
 const ModalProduct = () => {
 
     const { isOpen, handleModal, items, setItems, producto, setProducto, unidad, setUnidad, cantidad, setCantidad, precio, setPrecio } = usePeruQuoteContext();
@@ -15,6 +16,10 @@ const ModalProduct = () => {
 
     const addItem = (e) => {
         e.preventDefault()
+        if ([producto, unidad, cantidad, precio].includes("")) {
+            alert("¡Existen campos vacios!")
+            return;
+        }
         setItems([...items, {
             id: window.crypto.randomUUID(),
             producto: producto.toLowerCase(),
@@ -26,6 +31,7 @@ const ModalProduct = () => {
         setUnidad("")
         setCantidad("")
         setPrecio("")
+        handleModal()
     }
     return (
         <div className={`absolute h-full w-full left-0 top-0 bg-white/50 backdrop-blur-md flex flex-col justify-center items-center px-5
