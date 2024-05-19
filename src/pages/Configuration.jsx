@@ -1,57 +1,44 @@
-import React from 'react'
-import { IoIosReturnLeft } from "react-icons/io";
-import { Link } from 'react-router-dom';
-import usePeruQuoteContext from '../hooks/usePeruQuoteContext';
+import { IoArrowBackCircleSharp } from "react-icons/io5";
+import { Link } from "react-router-dom";
 
 const Configuration = () => {
 
-  const { empresa, setEmpresa, empNombre, setEmpNombre, empDoi, setEmpDoi, empTelefono, setEmpTelefono } = usePeruQuoteContext();
-
-  const addEmpresa = (e) => {
-    e.preventDefault()
-    setEmpresa([...empresa, {
-      empNombre,
-      empDoi,
-      empTelefono
-    }])
-    setEmpNombre("")
-    setEmpDoi("")
-    setEmpTelefono("")
-
-  }
-
   return (
-    <div className='px-5'>
-      <div className='flex justify-between items-center mb-5'>
-        <h3 className='text-2xl font-bold'>Datos de la empresa</h3>
-        <Link to={"/"}><IoIosReturnLeft size={35} /></Link>
+    <div className="h-screen p-5 flex flex-col gap-5">
+      <div className="flex justify-end">
+        <Link to={"/home"}>
+          <IoArrowBackCircleSharp size={40} />
+        </Link>
       </div>
-      <form className='grid gap-2'>
-        <label htmlFor="">Nombre:</label>
+      <h3 className="text-center font-bold text-2xl">Configuración</h3>
+      <form className="grid gap-2">
+        <label
+          className="font-semibold"
+          htmlFor="">Nombre de la empresa</label>
         <input
+          className="px-2 py-1 rounded-sm outline-none bg-[#1E2139]"
           type="text"
-          placeholder='Ingrese el nombre de la empresa ...'
-          className='py-2 px-2 text-black'
-          value={empNombre}
-          onChange={(e) => setEmpNombre(e.target.value)}
+          placeholder="..."
         />
-        <label htmlFor="">D.O.I.:</label>
+        <label
+          className="font-semibold"
+          htmlFor="">DOI de la empresa</label>
         <input
-          type="number"
-          placeholder='Ingrese RUC u otro ...'
-          className='py-2 px-2 text-black'
-          value={empDoi}
-          onChange={(e) => setEmpDoi(e.target.value)}
+          className="px-2 py-1 rounded-sm outline-none bg-[#1E2139]"
+          type="text"
+          placeholder="..."
         />
-        <label htmlFor="">Teléfono:</label>
+        <label
+          className="font-semibold"
+          htmlFor="">Telefono de la empresa</label>
         <input
-          type="number"
-          placeholder='Ingrese su telefono de contacto'
-          className='py-2 px-2 text-black'
-          value={empTelefono}
-          onChange={(e) => setEmpTelefono(e.target.value)}
+          className="px-2 py-1 rounded-sm outline-none bg-[#1E2139]"
+          type="text"
+          placeholder="..."
         />
-        <button className='py-2 bg-gray-400 mt-5' onClick={addEmpresa}>Guardar</button>
+        <button className="bg-[#7B5CFA] px-5 py-2 rounded-full text-white font-semibold mx-auto mt-10">
+          Guardar
+        </button>
       </form>
     </div>
   )
