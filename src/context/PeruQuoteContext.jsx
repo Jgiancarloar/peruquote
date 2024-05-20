@@ -10,6 +10,8 @@ const PeruQuoteProvider = ({ children }) => {
     const [empNombre,setEmpNombre] = useState("")
     const [empDoi,setEmpDoi] = useState("")
     const [empTelefono,setEmpTelefono] = useState("")
+    const [empObs,setEmpObs] = useState("")
+    const [empBancos,setEmpBancos] = useState("")
     const [items,setItems] = useState([])
     const [producto,setProducto] = useState("")
     const [unidad,setUnidad] = useState("")
@@ -29,7 +31,7 @@ const PeruQuoteProvider = ({ children }) => {
                 handleModal,
                 data,
                 setData,
-                empresa,setEmpresa,empNombre,setEmpNombre,empDoi,setEmpDoi,empTelefono,setEmpTelefono,
+                empresa,setEmpresa,empNombre,setEmpNombre,empDoi,setEmpDoi,empTelefono,setEmpTelefono,empObs,setEmpObs,empBancos,setEmpBancos,
                 items,
                 setItems,
                 producto,setProducto,unidad,setUnidad,cantidad,setCantidad,precio,setPrecio,
