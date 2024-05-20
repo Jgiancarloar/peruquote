@@ -17,7 +17,7 @@ const Home = () => {
           </button>
         </Link>
       </div>
-      <div className='h-screen flex flex-col gap-3 overflow-y-auto'>
+      <div className='h-full flex flex-col gap-3 overflow-y-auto'>
         <ViewProforma id={1} monto={200} />
         <ViewProforma id={2} monto={2200} />
         <ViewProforma id={3} monto={500} />

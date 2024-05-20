@@ -16,7 +16,7 @@ const Configuration = () => {
           className="font-semibold"
           htmlFor="">Nombre de la empresa</label>
         <input
-          className="w-full px-2 py-1 rounded-sm outline-none bg-[#1E2139]"
+          className="w-full px-2 py-1 rounded-sm outline-none bg-[#1E2139] focus:disabled:"
           type="text"
           placeholder="..."
         />

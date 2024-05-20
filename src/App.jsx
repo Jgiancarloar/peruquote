@@ -32,7 +32,7 @@ function App() {
   }, [items])
   
   return (
-    <main className="bg-[#141624] h-screen font-onest overflow-y-hidden">
+    <main className="bg-[#141624] h-screen font-onest">
       <section className="text-slate-100">
         <Routes >
           <Route path="/" element={<Home></Home>}></Route>
